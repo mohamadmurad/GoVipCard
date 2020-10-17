@@ -114,8 +114,8 @@ class CardsController extends Controller
 
 
         $barcode = $request->get('barcode');
-        $amount = $request->get('amount');
-
+        $OrderAmount = $request->get('amount');
+        $amount = $OrderAmount * 10 / 100;
         DB::beginTransaction();
         try {
 

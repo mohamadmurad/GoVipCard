@@ -21,8 +21,8 @@
                 <form method="post" action="{{route('deposit')}}" id="withdrawForm">
                     @csrf
                     <div class="form-group">
-                        <label >ادخل القيمة التي تريد اضافتها للبطاقة</label>
-                        <input type="number" class="form-control" name="amount" placeholder="القيمة التي تريد اضافتها للبطاقة" required min="1"
+                        <label >ادخل قيمة الفاتورة</label>
+                        <input type="number" class="form-control" name="amount" id="orderAmount" placeholder="قيمة الفاتورة" required min="1"
                                autofocus>
                         <input type="hidden" class="" name="barcode" value="{{$card->barcode}}">
                         <small  class="form-text text-muted">يجب ان لا تكون القيمة سالبة او صفر</small>
@@ -33,6 +33,11 @@
                         </ul>
                     </div>
                     <div style="clear: both;"></div>
+
+                    <div class="float-right">
+                        <p> القيمة التي ستضاف للبطاقة <span id="cardBalance" style="color: #ff3e3e;"></span></p>
+
+                    </div>
 
 
                     <button type="submit" class="btn btn-primary">إضافة</button>
