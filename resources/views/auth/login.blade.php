@@ -2,6 +2,7 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             <div class="text-center">
+                <h1>Opal Vip Card</h1>
                 <h1>اهلا بك </h1>
                 <p>الرجاء تسجيل الدخول لتتمكن من استخدام الموقع </p>
             </div>
