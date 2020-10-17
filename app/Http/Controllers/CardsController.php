@@ -45,7 +45,7 @@ class CardsController extends Controller
 
         $barcode = $request->get('barcode');
 
-        $card = cards::where('barcode','=',$barcode)->with('withdraw')->first();
+        $card = cards::where('barcode','=',$barcode)->with(['withdraw','deposits'])->first();
 
         //dd($card);
         return view('card.info',compact('card'));

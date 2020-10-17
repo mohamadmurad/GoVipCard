@@ -62,7 +62,7 @@
         <script>
         $("#withdrawForm").on('submit',function(e) {
             e.preventDefault(); // avoid to execute the actual submit of the form.
-           if (confirm("هل تريد اكمال العملية ؟")){
+           if (confirm("هل تريد اكمال عملية السحب ؟")){
                var form = $(this);
                var url = form.attr('action');
 
@@ -82,6 +82,34 @@
                    }
                });
            }
+
+
+
+
+        });
+
+        $("#depositForm").on('submit',function(e) {
+            e.preventDefault();
+            if (confirm("هل تريد اكمال عملية الاضافة ؟")){
+                var form = $(this);
+                var url = form.attr('action');
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: form.serialize(), // serializes the form's elements.
+                    success: function(data)
+                    {
+                        $status = data['data'];
+                        if ($status){
+                            location.reload();
+                        }else{
+                            alert('العملية لم تنجح');
+                        }
+
+                    }
+                });
+            }
 
 
 
