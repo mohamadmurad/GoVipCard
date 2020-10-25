@@ -109,13 +109,9 @@ class CardsController extends Controller
     public function deposit(deposit $request){
 
 
-
-
-
-
         $barcode = $request->get('barcode');
         $OrderAmount = $request->get('amount');
-        $amount = $OrderAmount * 10 / 100;
+        $amount = $OrderAmount * 5 / 100;
         DB::beginTransaction();
         try {
 
@@ -145,12 +141,7 @@ class CardsController extends Controller
                 'data' => false,
             ]);
 
-
         }
-
-
-
-
 
     }
 }

@@ -121,7 +121,7 @@
         $('#orderAmount').on('input', function() {
 
             var val = $('#orderAmount').val();
-            val = 10 * val / 100;
+            val = 5 * val / 100;
             $('#cardBalance').html(val);
         });
     </script>
