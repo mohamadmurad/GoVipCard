@@ -111,6 +111,7 @@ class CardsController extends Controller
 
         $barcode = $request->get('barcode');
         $OrderAmount = $request->get('amount');
+        $orderNo = $request->get('orderNo');
         $amount = $OrderAmount * 5 / 100;
         DB::beginTransaction();
         try {
@@ -118,6 +119,7 @@ class CardsController extends Controller
             $deposit = \App\Models\deposit::create([
                 'barcode' => $barcode,
                 'amount' => $amount,
+                'orderNo' => $orderNo,
                 'date' => Carbon::now(),
                 'user_id' => Auth::id(),
             ]);

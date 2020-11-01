@@ -113,6 +113,19 @@
                                     @endforeach
                                 </ul>
                             </div>
+                            <br>
+                            <div class="form-group">
+                                <label>رقم الفاتورة : </label>
+                                <input type="text" class="form-control" name="orderNo"
+                                       placeholder="الرجاء كتابة رقم الفاتورة " required
+                                >
+                                <small class="form-text text-muted">قم بمسح رقم الفاتورة او كتابتها يدوياً</small>
+                                <ul class="errors">
+                                    @foreach ($errors->get('orderNo') as $message)
+                                        <i>{{ $message }}</i>
+                                    @endforeach
+                                </ul>
+                            </div>
                             <div style="clear: both;"></div>
 
                             <div class="float-right">
@@ -139,7 +152,7 @@
                             <th>No</th>
                             <th>المستخدم</th>
                             <th>القيمة</th>
-
+                            <th>رقم الفاتورة</th>
                             <th>التاريخ</th>
 
                         </tr>
@@ -149,7 +162,7 @@
                                 <td>{{ ++$i }}</td>
                                 <td>{{ $deposit->user->name }}</td>
                                 <td>{{ $deposit->amount }}</td>
-
+                                <td>{{ $deposit->orderNo }}</td>
                                 <td>{{ $deposit->date }}</td>
 
                             </tr>

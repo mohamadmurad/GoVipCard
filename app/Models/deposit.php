@@ -13,6 +13,7 @@ class deposit extends Model
         'amount',
         'date',
         'user_id',
+        'orderNo',
     ];
 
     public function card()

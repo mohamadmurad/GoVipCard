@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5f05f54-75c5-41c0-a59d-53ba25dfe6cf" name="Default Changelist" comment="fix">
+    <list default="true" id="e5f05f54-75c5-41c0-a59d-53ba25dfe6cf" name="Default Changelist" comment="fix 5%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CardsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CardsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/deposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/card/info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/card/info.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +204,8 @@
       <workItem from="1602933846599" duration="687000" />
       <workItem from="1602935494687" duration="117000" />
       <workItem from="1602935616821" duration="7008000" />
-      <workItem from="1603609739643" duration="83000" />
+      <workItem from="1603609739643" duration="172000" />
+      <workItem from="1604219234215" duration="869000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1602940025306</created>
@@ -226,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602942593970</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix 5%">
+      <created>1603609866887</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603609866887</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +255,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="fix 5%" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 5%" />
   </component>
   <component name="WindowStateProjectService">
     <state x="450" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602769827886">
@@ -269,10 +279,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="498" y="134" key="Github.UntrackedFilesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602938330028" />
-    <state x="312" y="162" key="Vcs.Push.Dialog.v2" timestamp="1602942594696">
+    <state x="312" y="162" key="Vcs.Push.Dialog.v2" timestamp="1603609877416">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="312" y="162" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1602942594696" />
+    <state x="312" y="162" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1603609877416" />
     <state x="376" y="195" key="run.anything.popup" timestamp="1602941664305">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
