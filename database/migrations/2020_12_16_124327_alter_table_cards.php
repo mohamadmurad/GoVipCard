@@ -14,7 +14,7 @@ class AlterTableCards extends Migration
     public function up()
     {
         Schema::table('cards', function (Blueprint $table) {
-            $table->string('name');
+            $table->string('name')->nullable();
         });
     }
 
