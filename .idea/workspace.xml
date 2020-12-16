@@ -13,17 +13,19 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5f05f54-75c5-41c0-a59d-53ba25dfe6cf" name="Default Changelist" comment="fix 5%">
+      <change afterPath="$PROJECT_DIR$/resources/views/card/createName.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CardsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CardsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/deposit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/card/info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/card/info.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/cards.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/cards.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,17 +171,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/card" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mohamad.mu.HOMSICO\PhpstormProjects\opalVipCard\resources\views\card" />
       <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\public\img" />
       <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\app\Http\Requests" />
       <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\public\css" />
       <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\app\Http\Middleware" />
-      <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,6 +208,7 @@
       <workItem from="1602935616821" duration="7008000" />
       <workItem from="1603609739643" duration="172000" />
       <workItem from="1604219234215" duration="869000" />
+      <workItem from="1608122271546" duration="1048000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1602940025306</created>

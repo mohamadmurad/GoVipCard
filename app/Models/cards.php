@@ -12,6 +12,7 @@ class cards extends Model
     protected $fillable =[
         'barcode',
         'balance',
+        'name',
 
     ];
 

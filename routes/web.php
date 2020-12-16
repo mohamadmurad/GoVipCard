@@ -26,6 +26,11 @@ Route::group(['middleware' => ['auth:sanctum']],function (){
     })->name('withdrawget');
     Route::resource('users',\App\Http\Controllers\UsersController::class)->middleware('isAdminMiddleware');
 
+    Route::post('/addName',[\App\Http\Controllers\CardsController::class,'addName'])->name('addName');
+
+
+    Route::get('/addName',[\App\Http\Controllers\CardsController::class,'createName'])->name('createName');
+
 });
 
 

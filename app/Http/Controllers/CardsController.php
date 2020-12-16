@@ -55,9 +55,6 @@ class CardsController extends Controller
 
     public function withdraw(withdraw $request){
 
-
-
-
         $barcode = $request->get('barcode');
         $amount = $request->get('amount');
         $orderNo = $request->get('orderNo');
@@ -144,6 +141,33 @@ class CardsController extends Controller
             ]);
 
         }
+
+    }
+
+
+
+    public function addName(Request $request){
+
+        $barcode = $request->get('barcode');
+        $name = $request->get('name');
+
+        $this->validate($request,[
+            'barcode' => 'required|exists:cards,barcode',
+            'name' => 'required|string'
+        ]);
+
+        $card = cards::where('barcode','=',$request['barcode'])->first();
+
+        $card->fill([
+            'name' => $request['name'],
+        ])->save();
+        return redirect('addName');
+
+    }
+
+    public function createName(Request $request){
+        return view('card.createName');
+
 
     }
 }
