@@ -20,12 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5f05f54-75c5-41c0-a59d-53ba25dfe6cf" name="Default Changelist" comment="fix 5%">
-      <change afterPath="$PROJECT_DIR$/resources/views/card/createName.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CardsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CardsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/cards.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/cards.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_16_124327_alter_table_cards.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_124327_alter_table_cards.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,12 +158,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iuqUIOr3V7zmtjx4c667yA75ln" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/card" />
@@ -208,7 +206,7 @@
       <workItem from="1602935616821" duration="7008000" />
       <workItem from="1603609739643" duration="172000" />
       <workItem from="1604219234215" duration="869000" />
-      <workItem from="1608122271546" duration="1048000" />
+      <workItem from="1608122271546" duration="1557000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1602940025306</created>
@@ -238,7 +236,28 @@
       <option name="project" value="LOCAL" />
       <updated>1603609866887</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix 5%">
+      <created>1608123369664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608123369664</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix 5%">
+      <created>1608123379416</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608123379416</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix 5%">
+      <created>1608123557285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608123557285</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +276,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix 5%" />
     <option name="LAST_COMMIT_MESSAGE" value="fix 5%" />
@@ -282,9 +302,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="498" y="134" key="Github.UntrackedFilesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602938330028" />
-    <state x="312" y="162" key="Vcs.Push.Dialog.v2" timestamp="1603609877416">
+    <state x="312" y="162" key="Vcs.Push.Dialog.v2" timestamp="1608123561221">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state x="312" y="162" key="Vcs.Push.Dialog.v2/-1280.-132.1280.984/0.0.1440.860@0.0.1440.860" timestamp="1608123561221" />
     <state x="312" y="162" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1603609877416" />
     <state x="376" y="195" key="run.anything.popup" timestamp="1602941664305">
       <screen x="0" y="0" width="1440" height="860" />

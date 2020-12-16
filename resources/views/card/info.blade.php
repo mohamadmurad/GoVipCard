@@ -15,6 +15,13 @@
                     </h2>
 
                 </div>
+
+
+                <div class="float-left" style="margin-bottom:50px;">
+                    <h2>اسم صاحب البطاقة : <span class="font-semibold text-gray-800">{{ $card->name }}</span>
+                    </h2>
+
+                </div>
                 <div style="clear: both;"></div>
                 <!-- Tabs navs -->
                 <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
