@@ -6,36 +6,25 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-        <meta name="description" content="Homsi Co Vip Card">
-    <meta name="keywords" content="Vip, Card, Homsi , opal , free girl">
-    <meta name="author" content="Homsi Co.">
-        <meta property="og:title" content="Homsi Co Vip Card." />
-        <meta property="og:description" content="Homsi Co Vip Card" />
-        <meta property="og:image" content="{{ URL::asset('img/logo.PNG') }}" />
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
-
-
-    <!-- Font Awesome JS -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+        <!-- Load Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         @livewireStyles
 
         <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
+        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased" dir="rtl">
+        <x-jet-banner />
+
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-dropdown')
+            @livewire('navigation-menu')
 
             <!-- Page Heading -->
             <header class="bg-white shadow">
@@ -53,77 +42,15 @@
         @stack('modals')
 
         @livewireScripts
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+                integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+                integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+        </script>
 
-
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <script>
-        $("#withdrawForm").on('submit',function(e) {
-            e.preventDefault(); // avoid to execute the actual submit of the form.
-           if (confirm("هل تريد اكمال عملية السحب ؟")){
-               var form = $(this);
-               var url = form.attr('action');
-
-               $.ajax({
-                   type: "POST",
-                   url: url,
-                   data: form.serialize(), // serializes the form's elements.
-                   success: function(data)
-                   {
-                       $status = data['data'];
-                       if ($status){
-                           location.reload();
-                       }else{
-                           alert('العملية لم تنجح');
-                       }
-
-                   }
-               });
-           }
-
-
-
-
-        });
-
-        $("#depositForm").on('submit',function(e) {
-            e.preventDefault();
-            if (confirm("هل تريد اكمال عملية الاضافة ؟")){
-                var form = $(this);
-                var url = form.attr('action');
-
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: form.serialize(), // serializes the form's elements.
-                    success: function(data)
-                    {
-                        $status = data['data'];
-                        if ($status){
-                            location.reload();
-                        }else{
-                            alert('العملية لم تنجح');
-                        }
-
-                    }
-                });
-            }
-
-
-
-
-        });
-
-
-
-        $('#orderAmount').on('input', function() {
-
-            var val = $('#orderAmount').val();
-            val = 5 * val / 100;
-            $('#cardBalance').html(val);
-        });
-    </script>
     </body>
 </html>

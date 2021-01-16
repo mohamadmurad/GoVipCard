@@ -41,6 +41,7 @@ class CardsController extends Controller
 
     }
 
+
     public function info(info $request){
 
         $barcode = $request->get('barcode');
@@ -102,7 +103,6 @@ class CardsController extends Controller
 
     }
 
-
     public function deposit(deposit $request){
 
 
@@ -144,8 +144,6 @@ class CardsController extends Controller
 
     }
 
-
-
     public function addName(Request $request){
 
         $barcode = $request->get('barcode');
@@ -167,6 +165,21 @@ class CardsController extends Controller
 
     public function createName(Request $request){
         return view('card.createName');
+
+
+    }
+
+    public function cardReport(Request $request){
+
+        $card_withdraw = \App\Models\deposit::with('card')->groupBy('barcode')
+            ->selectRaw('sum(amount) as sum, barcode')->orderBy('barcode')
+            ->get();
+        $card_deposit = Withdrawal::with('card')->groupBy('barcode')
+            ->selectRaw('sum(amount) as sum, barcode')->orderBy('barcode')
+            ->get();
+
+
+        return view('card.report',compact('card_deposit'),compact('card_withdraw'));
 
 
     }

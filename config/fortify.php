@@ -46,9 +46,9 @@ return [
     |
     */
 
-    'username' => 'username',
+    'username' => 'email',
 
-    //'email' => 'email',
+    'email' => 'email',
 
     /*
     |--------------------------------------------------------------------------
@@ -62,6 +62,21 @@ return [
     */
 
     'home' => RouteServiceProvider::HOME,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fortify Routes Prefix / Subdomain
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify which prefix Fortify will assign to all the routes
+    | that it registers with the application. If necessary, you may change
+    | subdomain under which all of the Fortify routes will be available.
+    |
+    */
+
+    'prefix' => '',
+
+    'domain' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -88,8 +103,22 @@ return [
     */
 
     'limiters' => [
-        'login' => null,
+        'login' => 'login',
+        'two-factor' => 'two-factor',
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Register View Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify if the routes returning views should be disabled as
+    | you may not need them when building your own application. This may be
+    | especially true if you're writing a custom single-page application.
+    |
+    */
+
+    'views' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -103,12 +132,12 @@ return [
     */
 
     'features' => [
-        Features::registration(),
-        //Features::resetPasswords(),
+        //Features::registration(),
+       // Features::resetPasswords(),
         // Features::emailVerification(),
-        //Features::updateProfileInformation(),
+       // Features::updateProfileInformation(),
         Features::updatePasswords(),
-        /*Features::twoFactorAuthentication([
+       /* Features::twoFactorAuthentication([
             'confirmPassword' => true,
         ]),*/
     ],

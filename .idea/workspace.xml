@@ -20,7 +20,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5f05f54-75c5-41c0-a59d-53ba25dfe6cf" name="Default Changelist" comment="fix 5%">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_16_124327_alter_table_cards.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_124327_alter_table_cards.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/card/report.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/PasswordValidationRules.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/PasswordValidationRules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/ResetUserPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/ResetUserPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Jetstream/DeleteUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Jetstream/DeleteUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CardsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CardsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/JetstreamServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/JetstreamServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/AppLayout.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/AppLayout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/GuestLayout.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/GuestLayout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/delete-user-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/delete-user-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/logout-other-browser-sessions-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/logout-other-browser-sessions-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/two-factor-authentication-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/two-factor-authentication-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-password-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-password-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,11 +215,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard\resources\views\card" />
+      <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard\resources\views" />
+      <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard\database\migrations" />
+      <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard" />
       <recent name="C:\Users\mohamad.mu.HOMSICO\PhpstormProjects\opalVipCard\resources\views\card" />
-      <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\public\img" />
-      <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\app\Http\Requests" />
-      <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\public\css" />
-      <recent name="C:\Users\mohamad.mu\PhpstormProjects\vip\app\Http\Middleware" />
     </key>
   </component>
   <component name="RunManager">
@@ -207,6 +247,9 @@
       <workItem from="1603609739643" duration="172000" />
       <workItem from="1604219234215" duration="869000" />
       <workItem from="1608122271546" duration="1557000" />
+      <workItem from="1609853347425" duration="1706000" />
+      <workItem from="1609860547335" duration="687000" />
+      <workItem from="1610802598503" duration="8583000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1602940025306</created>
@@ -280,36 +323,5 @@
     <MESSAGE value="fix" />
     <MESSAGE value="fix 5%" />
     <option name="LAST_COMMIT_MESSAGE" value="fix 5%" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="450" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602769827886">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="450" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602769827885" />
-    <state x="450" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602921340070">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="450" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602921340070" />
-    <state x="500" y="184" key="FileChooserDialogImpl" timestamp="1602937537817">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1602937537817" />
-    <state x="598" y="327" key="Github.ShareDialog" timestamp="1602938322069">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="598" y="327" key="Github.ShareDialog/0.0.1440.860@0.0.1440.860" timestamp="1602938322069" />
-    <state x="498" y="134" key="Github.UntrackedFilesDialog" timestamp="1602938330028">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="498" y="134" key="Github.UntrackedFilesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602938330028" />
-    <state x="312" y="162" key="Vcs.Push.Dialog.v2" timestamp="1608123561221">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="312" y="162" key="Vcs.Push.Dialog.v2/-1280.-132.1280.984/0.0.1440.860@0.0.1440.860" timestamp="1608123561221" />
-    <state x="312" y="162" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1603609877416" />
-    <state x="376" y="195" key="run.anything.popup" timestamp="1602941664305">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="376" y="195" key="run.anything.popup/0.0.1440.860@0.0.1440.860" timestamp="1602941664305" />
   </component>
 </project>

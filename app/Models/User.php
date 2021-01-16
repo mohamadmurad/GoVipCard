@@ -25,8 +25,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'username',
-        'isAdmin',
+        'email',
         'password',
     ];
 
@@ -59,14 +58,4 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
-
-
-    public function withdraw(){
-        return $this->hasMany(Withdrawal::class,'user_id','id');
-    }
-
-
-    public function deposits(){
-        return $this->hasMany(deposit::class,'barcode','barcode')->orderBy('id','desc');
-    }
 }

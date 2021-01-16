@@ -31,7 +31,13 @@ Route::group(['middleware' => ['auth:sanctum']],function (){
 
     Route::get('/addName',[\App\Http\Controllers\CardsController::class,'createName'])->name('createName');
 
+    Route::get('/cardReport',[\App\Http\Controllers\CardsController::class,'cardReport'])->name('cardReport');
+
 });
 
 
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
