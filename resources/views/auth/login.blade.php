@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+           <h3>Go Toys Vip Cards</h3>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
