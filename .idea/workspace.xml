@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5f05f54-75c5-41c0-a59d-53ba25dfe6cf" name="Default Changelist" comment="fix 5%">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,17 +171,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/card" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard\public\img" />
       <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard\resources\views\card" />
       <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard\resources\views" />
       <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard\database\migrations" />
       <recent name="C:\Users\mohamad.mu\PhpstormProjects\opalVipCard" />
-      <recent name="C:\Users\mohamad.mu.HOMSICO\PhpstormProjects\opalVipCard\resources\views\card" />
     </key>
   </component>
   <component name="RunManager">
@@ -212,7 +212,7 @@
       <workItem from="1609853347425" duration="1706000" />
       <workItem from="1609860547335" duration="687000" />
       <workItem from="1610802598503" duration="9870000" />
-      <workItem from="1610887647896" duration="214000" />
+      <workItem from="1610887647896" duration="323000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1602940025306</created>
@@ -291,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610812687482</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix 5%">
+      <created>1610887874518</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610887874518</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
