@@ -1,6 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-.bg-white{
+main .bg-white{
     padding: 30px;
 }
