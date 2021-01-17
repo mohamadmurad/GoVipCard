@@ -2,7 +2,7 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             <div class="text-center">
-                <img src="{{ asset('img/logo.png') }}" alt="Image" width="50"/>
+                <img src="{{ asset('img/logo.png') }}" alt="Image" width="200"/>
                 <h3>Go Toys Vip Cards</h3>
             </div>
 
