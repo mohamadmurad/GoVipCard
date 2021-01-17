@@ -1,6 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
+            <img src="{{ asset('img/logo.png') }}" alt="Image" width="50"/>
            <h3>Go Toys Vip Cards</h3>
         </x-slot>
 
