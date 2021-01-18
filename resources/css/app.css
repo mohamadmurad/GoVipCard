@@ -9,6 +9,6 @@ main .bg-white{
     background-color: #613394 !important;
 }
 
-.hover\:bg-gray-700:hover{
+.hover\:bg-gray-700:hover , .bg-gray-800{
     background-color: #613394 !important;
 }
