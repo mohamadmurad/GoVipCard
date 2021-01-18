@@ -5,10 +5,10 @@ main .bg-white{
     padding: 30px;
 }
 
-.btn{
-
+.btn-primary{
+    background-color: #613394 !important;
 }
 
-button{
+.hover\:bg-gray-700:hover{
     background-color: #613394 !important;
 }
