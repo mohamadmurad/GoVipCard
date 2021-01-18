@@ -5,10 +5,10 @@ main .bg-white{
     padding: 30px;
 }
 
-.btn-primary{
+.btn{
 
 }
 
 button{
-    background-color: #613394;
+    background-color: #613394 !important;
 }
