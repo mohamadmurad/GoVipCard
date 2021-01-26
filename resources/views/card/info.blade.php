@@ -164,6 +164,7 @@
                             <th>القيمة</th>
                             <th>رقم الفاتورة</th>
                             <th>التاريخ</th>
+                            <th>#</th>
 
                         </tr>
                         <?php $i = 0?>
@@ -174,6 +175,15 @@
                                 <td>{{ $deposit->amount }}</td>
                                 <td>{{ $deposit->orderNo }}</td>
                                 <td>{{ $deposit->date }}</td>
+                                <td>
+                                    <form action="{{route('DeleteDeposit',['id'=>$deposit->id])}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger delete_btn">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
 
                             </tr>
                         @endforeach

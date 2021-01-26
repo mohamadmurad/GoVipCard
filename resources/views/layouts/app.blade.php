@@ -52,5 +52,19 @@
                 integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
         </script>
 
+    <script>
+
+        $('.delete_btn').on('click',function (){
+
+            var r = confirm("هل تريد الحذف؟");
+            if (r == true) {
+                return true;
+            } else {
+                return false;
+            }
+            return false;
+        });
+    </script>
+
     </body>
 </html>

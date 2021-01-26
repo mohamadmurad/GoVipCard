@@ -27,6 +27,7 @@ Route::group(['middleware' => ['auth:sanctum']],function (){
     Route::resource('users',\App\Http\Controllers\UsersController::class)->middleware('isAdminMiddleware');
 
     Route::post('/addName',[\App\Http\Controllers\CardsController::class,'addName'])->name('addName');
+    Route::delete('/Delete_deposit',[\App\Http\Controllers\CardsController::class,'deleteDeposit'])->name('DeleteDeposit');
 
 
     Route::get('/addName',[\App\Http\Controllers\CardsController::class,'createName'])->name('createName');

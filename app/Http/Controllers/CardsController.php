@@ -144,6 +144,40 @@ class CardsController extends Controller
 
     }
 
+    public function deleteDeposit(Request $request){
+
+
+        $id = $request['id'];
+
+        $deposit = \App\Models\deposit::findOrFail($id);
+        if ($deposit){
+            DB::beginTransaction();
+            try {
+
+                $card = $deposit->card;
+
+                $amount = $deposit->amount;
+                $card->balance =  $card->balance - $amount;
+                $card->update();
+                $deposit->delete();
+                DB::commit();
+
+                return redirect()->back();
+
+            }catch (Exception $e){
+
+                DB::rollBack();
+
+                return redirect()->back();
+            }
+
+
+        }
+
+
+
+    }
+
     public function addName(Request $request){
 
         $barcode = $request->get('barcode');
