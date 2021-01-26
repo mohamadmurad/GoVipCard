@@ -38,7 +38,9 @@
                                 role="tab"
                                 aria-controls="ex3-tabs-1"
                                 aria-selected="true"
-                            >حسم</a
+                            >حسم
+                                <i class="fa fa-minus"></i>
+                            </a
                             >
                         </li>
                     @endif
@@ -51,7 +53,9 @@
                             role="tab"
                             aria-controls="ex3-tabs-2"
                             aria-selected="false"
-                        >إضافة رصيد</a
+                        >إضافة رصيد
+                        <i class="fa fa-plus"></i>
+                        </a
                         >
                     </li>
                 </ul>
