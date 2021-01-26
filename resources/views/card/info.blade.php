@@ -180,7 +180,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger delete_btn">
-                                            <i class="fa fa-trash"></i>
+                                            delete
                                         </button>
                                     </form>
                                 </td>
