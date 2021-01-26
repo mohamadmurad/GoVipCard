@@ -164,8 +164,9 @@
                             <th>القيمة</th>
                             <th>رقم الفاتورة</th>
                             <th>التاريخ</th>
+                            @if (Auth::user()->isAdmin == 1)
                             <th>#</th>
-
+@endif
                         </tr>
                         <?php $i = 0?>
                         @foreach ($card->deposits as $deposit)
@@ -175,15 +176,17 @@
                                 <td>{{ $deposit->amount }}</td>
                                 <td>{{ $deposit->orderNo }}</td>
                                 <td>{{ $deposit->date }}</td>
+                                @if (Auth::user()->isAdmin == 1)
                                 <td>
                                     <form action="{{route('DeleteDeposit',['id'=>$deposit->id])}}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger delete_btn">
-                                            delete
+                                            <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
                                 </td>
+                                @endif
 
                             </tr>
                         @endforeach
