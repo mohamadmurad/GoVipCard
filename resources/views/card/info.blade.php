@@ -232,7 +232,7 @@
                                         <form action="{{route('withdrawToDeposit',['id'=>$withdraw->id])}}" method="POST">
                                             @csrf
 
-                                            <button type="submit" class="btn btn-danger delete_btn">
+                                            <button type="submit" class="btn btn-danger move_btn">
                                                 <i class="fa fa-minus"></i>
                                             </button>
                                         </form>

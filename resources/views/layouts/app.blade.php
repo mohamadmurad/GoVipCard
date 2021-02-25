@@ -65,6 +65,18 @@
             }
             return false;
         });
+        move_btn
+
+        $('.move_btn').on('click',function (){
+
+            var r = confirm("هل تريد نقل الخصم للاضافة؟");
+            if (r == true) {
+                return true;
+            } else {
+                return false;
+            }
+            return false;
+        });
     </script>
 
     </body>
