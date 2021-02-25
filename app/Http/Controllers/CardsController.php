@@ -173,8 +173,91 @@ class CardsController extends Controller
 
 
         }
+        return redirect()->back();
+
+    }
+
+    public function DeleteWithdraw(Request $request){
+
+        $id = $request['id'];
+
+        $withdraw = \App\Models\Withdrawal::findOrFail($id);
+        if ($withdraw){
+            DB::beginTransaction();
+            try {
+
+                $card = $withdraw->card;
+
+                $amount = $withdraw->amount;
+                $card->balance =  $card->balance + $amount;
+                $card->update();
+                $withdraw->delete();
+
+                DB::commit();
+
+                return redirect()->back();
+
+            }catch (Exception $e){
+
+                DB::rollBack();
+
+                return redirect()->back();
+            }
 
 
+        }
+        return redirect()->back();
+
+    }
+
+
+    public function withdrawToDeposit(Request $request){
+
+        $id = $request['id'];
+
+        $withdraw = \App\Models\Withdrawal::findOrFail($id);
+        if ($withdraw){
+            DB::beginTransaction();
+            try {
+
+                $card = $withdraw->card;
+
+                $amount = $withdraw->amount;
+                $card->balance =  $card->balance + $amount;
+
+
+                $card->update();
+
+
+
+                $amount = $amount * 5 / 100;
+                $deposit = \App\Models\deposit::create([
+                    'barcode' => $withdraw->barcode,
+                    'amount' => $amount,
+                    'orderNo' => $withdraw->orderNo,
+                    'date' => Carbon::now(),
+                    'user_id' => Auth::id(),
+                ]);
+
+                $card->balance =  $card->balance + $amount;
+                $card->update();
+
+                $withdraw->delete();
+
+                DB::commit();
+
+                return redirect()->back();
+
+            }catch (Exception $e){
+
+                DB::rollBack();
+
+                return redirect()->back();
+            }
+
+
+        }
+        return redirect()->back();
 
     }
 

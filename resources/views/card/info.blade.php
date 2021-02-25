@@ -218,6 +218,27 @@
                                 <td>{{ $withdraw->amount }}</td>
                                 <td>{{ $withdraw->orderNo }}</td>
                                 <td>{{ $withdraw->date }}</td>
+                                @if (Auth::user()->isAdmin == 1)
+                                    <td>
+                                        <form action="{{route('DeleteWithdraw',['id'=>$withdraw->id])}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger delete_btn">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="{{route('withdrawToDeposit',['id'=>$withdraw->id])}}" method="POST">
+                                            @csrf
+
+                                            <button type="submit" class="btn btn-danger delete_btn">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+
+                                @endif
 
                             </tr>
                         @endforeach

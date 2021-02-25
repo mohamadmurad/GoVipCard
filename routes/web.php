@@ -28,6 +28,8 @@ Route::group(['middleware' => ['auth:sanctum']],function (){
 
     Route::post('/addName',[\App\Http\Controllers\CardsController::class,'addName'])->name('addName');
     Route::delete('/Delete_deposit',[\App\Http\Controllers\CardsController::class,'deleteDeposit'])->name('DeleteDeposit');
+    Route::delete('/Delete_withdraw',[\App\Http\Controllers\CardsController::class,'DeleteWithdraw'])->name('DeleteWithdraw');
+    Route::post('/withdrawToDeposit',[\App\Http\Controllers\CardsController::class,'withdrawToDeposit'])->name('withdrawToDeposit');
 
 
     Route::get('/addName',[\App\Http\Controllers\CardsController::class,'createName'])->name('createName');
