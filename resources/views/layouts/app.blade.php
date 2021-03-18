@@ -65,7 +65,7 @@
             }
             return false;
         });
-        move_btn
+
 
         $('.move_btn').on('click',function (){
 
