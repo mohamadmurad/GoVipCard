@@ -11,6 +11,7 @@ use App\Models\Withdrawal;
 use Carbon\Carbon;
 use http\Env\Response;
 use http\Exception;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -27,17 +28,29 @@ class CardsController extends Controller
         $firstBarcode = $request->get('firstBarcode');
         $lastBarcode = $request->get('lastBarcode');
         $balance = $request->get('balance');
+        DB::beginTransaction();
+        try {
 
-        for ($i = $firstBarcode;$i<=$lastBarcode;$i++){
-            $card = cards::create([
-                'barcode' => $i,
-                'balance' =>$balance,
-            ]);
+            for ($i = $firstBarcode;$i<=$lastBarcode;$i++){
+                $card = cards::create([
+                    'barcode' => $i,
+                    'balance' =>$balance,
+                ]);
+            }
+            DB::commit();
+
+            return redirect('/');
+
+
+        }catch (QueryException $e){
+
+            DB::rollBack();
+
+            return redirect('/create')->with('error','Duplicate entry ');
         }
 
-        return response()->json([
-            'data' => true,
-        ]);
+
+
 
     }
 
@@ -79,21 +92,15 @@ class CardsController extends Controller
             $card->update();
             DB::commit();
 
-            return response()->json([
-                'data' => true,
-            ]);
 
-            return redirect('info',compact('card'));
+            return redirect('/info?barcode='.$card->barcode);
 
         }catch (Exception $e){
 
             DB::rollBack();
-            $card = cards::where('barcode','=',$barcode)->with('withdraw.user')->first();
-            return response()->json([
-                'data' => false,
-            ]);
-            dd($card);
-            return redirect('info',compact('card'));
+
+
+            return redirect('/info?barcode='.$card->barcode);
 
         }
 
@@ -103,7 +110,7 @@ class CardsController extends Controller
 
     }
 
-    public function deposit(deposit $request){
+    public function deposit(deposit $request){ // add money
 
 
         $barcode = $request->get('barcode');
@@ -127,24 +134,24 @@ class CardsController extends Controller
 
             DB::commit();
 
-            return response()->json([
+            return redirect('/info?barcode='.$card->barcode);
+         /*   return response()->json([
                 'data' => true,
-            ]);
+            ]);*/
 
 
         }catch (Exception $e){
 
             DB::rollBack();
-            $card = cards::where('barcode','=',$barcode)->with('deposits.user')->first();
-            return response()->json([
-                'data' => false,
-            ]);
+
+
+            return redirect('/info?barcode='.$card->barcode);
 
         }
 
     }
 
-    public function deleteDeposit(Request $request){
+    public function deleteDeposit(Request $request){ // delete add money
 
 
         $id = $request['id'];
@@ -162,13 +169,13 @@ class CardsController extends Controller
                 $deposit->delete();
                 DB::commit();
 
-                return redirect()->back();
+                return redirect('/info?barcode='.$card->barcode);
 
             }catch (Exception $e){
 
                 DB::rollBack();
 
-                return redirect()->back();
+                return redirect('/info?barcode='.$card->barcode);
             }
 
 
@@ -177,7 +184,7 @@ class CardsController extends Controller
 
     }
 
-    public function DeleteWithdraw(Request $request){
+    public function DeleteWithdraw(Request $request){ // delete remove money
 
         $id = $request['id'];
 
@@ -195,13 +202,13 @@ class CardsController extends Controller
 
                 DB::commit();
 
-                return redirect()->back();
+                return redirect('/info?barcode='.$card->barcode);
 
             }catch (Exception $e){
 
                 DB::rollBack();
 
-                return redirect()->back();
+                return redirect('/info?barcode='.$card->barcode);
             }
 
 
@@ -211,7 +218,7 @@ class CardsController extends Controller
     }
 
 
-    public function withdrawToDeposit(Request $request){
+    public function withdrawToDeposit(Request $request){ // delete to add
 
         $id = $request['id'];
 
@@ -246,13 +253,13 @@ class CardsController extends Controller
 
                 DB::commit();
 
-                return redirect()->back();
+                return redirect('/info?barcode='.$card->barcode);
 
             }catch (Exception $e){
 
                 DB::rollBack();
 
-                return redirect()->back();
+                return redirect('/info?barcode='.$card->barcode);
             }
 
 
@@ -287,6 +294,7 @@ class CardsController extends Controller
     }
 
     public function cardReport(Request $request){
+
 
         $card_withdraw = \App\Models\deposit::with('card')->groupBy('barcode')
             ->selectRaw('sum(amount) as sum, barcode')->orderBy('barcode')

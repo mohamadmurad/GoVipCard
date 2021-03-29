@@ -4,6 +4,12 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('إضافة كروت' ) }}
         </h2>
+
+        @if ($message = Session::get('error'))
+            <div class="alert alert-danger">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
     </x-slot>
 
     <div class="py-12">
