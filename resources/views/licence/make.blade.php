@@ -1,14 +1,11 @@
-<x-app-layout>
+@extends('layout.layout')
 
-    <x-slot name="header">
+@section('content')
 
+    @if(isset($f))
 
-
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            li
-        </h2>
-    </x-slot>
-
+        <h1>{{$f}}</h1>
+    @endif
 
     <form action="{{ route('licenceMake') }}" method="POST">
         @csrf
@@ -28,4 +25,4 @@
         </div>
 
     </form>
-</x-app-layout>
+@endsection

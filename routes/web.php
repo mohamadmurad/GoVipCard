@@ -41,27 +41,10 @@ Route::group(['middleware' => ['auth:sanctum','isAdminMiddleware']],function () 
 
     Route::get('/cardReport',[\App\Http\Controllers\CardsController::class,'cardReport'])->name('cardReport');
 
-    Route::get('li',function (){
+    Route::get('li',[\App\Http\Controllers\LicenceController::class,'index']);
 
-        return view('licence.make');
+    Route::post('li', [\App\Http\Controllers\LicenceController::class,'registerLicence'])->name('licenceMake');
 
-    });
-
-    Route::post('li',function (\Illuminate\Http\Request $request){
-        // dd($request->get('date'));
-        if (!file_exists(env('Licence_dir','E:\Mhd'))){
-            mkdir(env('Licence_dir','E:\Mhd'));
-        }
-        // dd(is_dir(env('Licence_dir','E:\Mhd')));
-        $data = Carbon::make($request->get('date'));
-
-        $file = fopen(env('Licence_dir','E:\Mhd') . '\\' .env('Licence_file','Mhd2021.li'),'wr');
-        $f = fwrite($file,$data,200);
-        fclose($file);
-
-        return redirect('/');
-
-    })->name('licenceMake');
 
 
 
