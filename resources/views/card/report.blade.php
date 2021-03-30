@@ -2,7 +2,7 @@
     <x-slot name="header">
 
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('معلومات عن الكروت' ) }}
+            {{ __('معلومات عن البطاقات' ) }}
         </h2>
     </x-slot>
 
@@ -10,57 +10,71 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-2">
 
-
                 <div class="row">
                     <div class="col">
-                        <h3>الاضافات</h3>
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">باركود</th>
-                                <th scope="col">الاسم</th>
-                                <th scope="col">مجموع الإضافات</th>
-                                <th scope="col">قيمة البطاقة الحالية</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($card_withdraw as $cardW)
-                                <tr>
-                                    <td>{{$cardW->barcode}}</td>
-                                    <td>{{$cardW->card->name}}</td>
-                                    <td>{{$cardW->sum}} ل.س</td>
-                                    <td>{{$cardW->card->balance}} </td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                        <div class="card bg-danger" style="color: #fff">
+                            <div class="card-header">
+                                مجموع الحسومات
+                            </div>
+                            <div class="card-body " style="
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+">
+                                <i class="fa fa-minus"></i>
+
+                                {{$allWithdraw}} ل.س
+                            </div>
+                        </div>
+
 
                     </div>
                     <div class="col">
-                        <h3>الخصومات</h3>
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">باركود</th>
-                                <th scope="col">الاسم</th>
-                                <th scope="col">مجموع الخصومات</th>
-                                <th scope="col">قيمة البطاقة الحالية</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($card_deposit as $cardD)
-                                <tr>
-                                    <td>{{$cardD->barcode}}</td>
-                                    <td>{{$cardD->card->name}}</td>
-                                    <td>-{{$cardD->sum}} ل.س</td>
-                                    <td>{{$cardD->card->balance}} </td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                        <div class="card bg-success" style="color: #fff">
+                            <div class="card-header">
+                                مجموع الإضافات
+                            </div>
+                            <div class="card-body" style="
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+">
+                                <i class="fa fa-plus"></i>
+
+                                {{$allDeposits}} ل.س
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
+                <br>
+                <br>
+
+                <h3>العمليات</h3>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">باركود</th>
+                        <th scope="col">الاسم</th>
+                        <th scope="col"><i class="fa fa-plus"></i>مجموع الإضافات</th>
+                        <th scope="col"><i class="fa fa-minus"></i>مجموع الحسومات</th>
+                        <th scope="col">قيمة البطاقة الحالية</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($cards as $card)
+                        <tr>
+                            <td>{{$card->barcode}}</td>
+                            <td>{{$card->name}}</td>
+                            <td>{{$card->deposits_sum_amount ?? 0}} ل.س</td>
+                            <td>{{$card->withdraw_sum_amount ?? 0}} ل.س</td>
+                            <td>{{$card->balance}} ل.س</td>
+
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
 
 
             </div>

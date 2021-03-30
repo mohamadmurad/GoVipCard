@@ -295,16 +295,29 @@ class CardsController extends Controller
 
     public function cardReport(Request $request){
 
+        $cards = cards::select('barcode','balance','name')->withSum('withdraw','amount')->withSum('deposits','amount')->get();
 
-        $card_withdraw = \App\Models\deposit::with('card')->groupBy('barcode')
+
+        $allWithdraw = Withdrawal::sum('amount');
+        $allDeposits = \App\Models\deposit::sum('amount');
+
+
+     //   dd($cards);
+
+     /*   $card_withdraw = \App\Models\deposit::with('card')->groupBy('barcode')
             ->selectRaw('sum(amount) as sum, barcode')->orderBy('barcode')
             ->get();
         $card_deposit = Withdrawal::with('card')->groupBy('barcode')
             ->selectRaw('sum(amount) as sum, barcode')->orderBy('barcode')
             ->get();
+*/
 
+        return view('card.report',[
+            'cards' => $cards,
+            'allWithdraw' => $allWithdraw,
+            'allDeposits' => $allDeposits,
 
-        return view('card.report',compact('card_deposit'),compact('card_withdraw'));
+        ]);
 
 
     }
